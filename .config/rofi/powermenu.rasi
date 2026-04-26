@@ -1,0 +1,65 @@
+configuration {
+    show-icons: false;
+    font: "JetBrainsMono Nerd Font Medium 12";
+}
+
+window {
+    location: center;
+    anchor: center;
+    width: 480px;
+    background-color: #000000;
+    border: 1px;
+    /* A deep crimson border for that gothic edge */
+    border-color: #440000;
+    border-radius: 0px; /* Sharper corners look more "Gothic" */
+}
+
+window {
+    /* Slight transparency for a misty look */
+    background-color: rgba(0, 0, 0, 0.9);
+}
+
+mainbox {
+    padding: 25px;
+    children: [listview];
+    background-color: transparent;
+}
+
+listview {
+    columns: 3;
+    lines: 1;
+    spacing: 15px;
+    background-color: transparent;
+}
+
+element {
+    background-color: #0a0a0a;
+    border: 1px;
+    border-radius: 0px;
+    border-color: #1a1a1a;
+    padding: 20px 0px;
+}
+
+element selected {
+    /* The "Glow" effect when selected */
+    background-color: #660000;
+    border-color: #990000;
+}
+
+element-text {
+    horizontal-align: 0.5;
+    vertical-align: 0.5;
+    /* Pale, ghostly white text */
+    text-color: #c0c0c0;
+    background-color: transparent;
+}
+
+element selected element-text {
+    /* High contrast on selection */
+    text-color: #ffffff;
+}
+
+/* Disabled elements kept for structure */
+inputbar, prompt, entry, textbox-prompt-colon, message {
+    enabled: false;
+}

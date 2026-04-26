@@ -1,0 +1,62 @@
+[global]
+    monitor = 0
+    follow = mouse
+    
+    # POSITION: Top-Left (Increased offset for a "floating" feel)
+    origin = top-left
+    offset = 20x60 
+    
+    # DIMENSIONS: Slightly wider for serif readability
+    width = 300
+    height = 120
+    notification_limit = 5
+    
+    # THE LOOK: Deep Charcoal and Blood Crimson
+    background = "#0a0a0ae6" 
+    foreground = "#c0c0c0"    # Muted Silver
+    frame_color = "#880000"   # Dried Blood Red
+    # BORDER: Thinner for a more "ink-line" feel
+    frame_width = 1
+    separator_color = "#4d0000"
+    
+    # SHARP EDGES (Gothic rule: No round corners)
+    corner_radius = 0
+    padding = 12
+    horizontal_padding = 15
+    text_icon_padding = 15
+    
+    # TYPOGRAPHY: Matching Rofi
+    # Note: Use %s for Summary (bold) and %b for Body
+    font = "Cormorant Garamond Bold 12"
+    format = "<span foreground='#aa0000' font='14'>†</span> <b>%s</b>\n%b"
+    alignment = left
+    vertical_alignment = center
+    
+    # TIMING: How long the message lingers (in seconds)
+    # 5 seconds is usually the "sweet spot"
+    timeout = 5
+
+    # PROGRESS BAR: Crimson Highlight
+    progress_bar = true
+    progress_bar_height = 3
+    progress_bar_frame_width = 0
+    highlight = "#aa0000"
+
+[urgency_low]
+    background = "#050505"
+    foreground = "#666666"
+    frame_color = "#330000"
+    timeout = 3
+
+[urgency_normal]
+    background = "#0a0a0a"
+    foreground = "#c0c0c0"
+    frame_color = "#880000"
+    timeout = 5
+
+[urgency_critical]
+    # Red background with bone-white text for emergencies
+    background = "#3a0000"
+    foreground = "#ffffff"
+    frame_color = "#ff4444"
+    timeout = 0

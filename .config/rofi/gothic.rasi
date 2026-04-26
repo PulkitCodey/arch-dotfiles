@@ -1,0 +1,108 @@
+/*******************************************************************************
+ * THE ELDRITCH GOTHIC THEME 
+ * A sharp, high-contrast theme for the modern vampire.
+ *******************************************************************************/
+
+* {
+    /* Color Palette */
+    bg-black:          #080808;
+    bg-trans:          #080808f2; /* Nearly opaque for readability */
+    bg-selected:       #4d0000;   /* Dried blood red */
+    fg-silver:         #c0c0c0;   /* Muted bone/silver */
+    accent-crimson:    #aa0000;   /* Sharp blood red */
+    urgent-red:        #ff4444;
+    
+    /* Global Styles */
+    background-color:  transparent;
+    text-color:        @fg-silver;
+    
+    /* Make sure these fonts are installed! */
+    font:              "Cormorant Garamond Bold 14";
+}
+
+window {
+    background-color:  @bg-trans;
+    location:          center;
+    anchor:            center;
+    width:             640px;
+    border:            2px;
+    border-color:      @accent-crimson;
+    padding:           40px;
+}
+
+mainbox {
+    spacing:           25px;
+    children:          [ inputbar, listview ];
+}
+
+/* --- Input Section --- */
+
+inputbar {
+    padding:           0px 0px 10px 0px;
+    border:            0px 0px 2px 0px; 
+    border-color:      @accent-crimson;
+    children:          [ prompt, entry ];
+}
+
+prompt {
+    text-color:        @accent-crimson;
+    padding:           0px 15px 0px 0px;
+    /* Blackletter font for the 'Seek' prompt */
+    font:              "FreeFraktur 22"; 
+}
+
+entry {
+    placeholder:       "Seek...";
+    placeholder-color: #333333;
+    vertical-align:    0.5;
+}
+
+/* --- List Section --- */
+
+listview {
+    fixed-height:      0;
+    border:            0px;
+    spacing:           10px;
+    scrollbar:         false;
+    lines:             8;
+}
+
+element {
+    padding:           10px;
+    cursor:            pointer;
+    spacing:           15px;
+    border-radius:     0px;
+}
+
+element normal.normal {
+    background-color: transparent;
+}
+
+element selected.normal {
+    background-color: @bg-selected;
+    text-color:       #ffffff;
+    /* Vertical accent bar on the left */
+    border:           0px 0px 0px 6px;
+    border-color:     @accent-crimson;
+}
+
+/* Fix for icons and text alignment */
+element-icon {
+    size:             1.5em;
+    cursor:           inherit;
+}
+
+element-text {
+    background-color: inherit;
+    text-color:       inherit;
+    vertical-align:   0.5;
+    cursor:           inherit;
+}
+
+/* --- Error/Message Section --- */
+error-message {
+    padding:          20px;
+    background-color: @bg-black;
+    border:           2px;
+    border-color:     @urgent-red;
+}
